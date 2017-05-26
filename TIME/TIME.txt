@@ -1,0 +1,11 @@
+1. I created the 2 structs (liness.h and note.h) and the functions checkNotes 
+    and makeStaff in main.cpp. I also modified the drawLine function in 
+    houghL.cpp to only print lines of interest and their actual lengths as
+    well as populate the array of lines. 
+
+2. 50% - Vaasu and I discussed the concepts a lot together and, while I wrote 
+    most of the actual functionality, Vaasu did just as much of the testing 
+    and the entire website, as well as much functionality that we didn't have 
+    time to implement yet, so it evened out. 
+
+3. about 8 or 9 hours - mostly spent debugging and finding flaws in my logic.

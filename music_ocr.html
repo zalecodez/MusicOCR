@@ -1,0 +1,70 @@
+<h1> Music OCR </h1>
+<h2> by Zale and Vaasu </h2>
+
+We have created a program that takes an image of sheet music, and prints out the notes to play.
+
+<p>
+<h2>Assumptions:</h2>
+<p>
+1) The key signature is C
+<p>
+2) Every note has the same rhythm.
+<p>
+3) No sharps or flats
+<p>
+4) All notes are within 1 ledger of the staff
+<p>
+5) Treble Clef
+<p>
+<h2> Method: </h2>
+<p>
+Step 1) Find lines using hough transform
+	
+	
+<p>
+Step 2) Filter lines by length and angle to determine staff lines
+	
+		
+
+<p>
+Step 3) Find a set of 5 lines that comprise a staff by looking at the gap between the lines
+<p>
+Step 4) Scan each staff using a window to find notes and their corresponding position in the 		staff.
+<p>
+Step 5) Label the notes and print out their pitch!
+<p>
+
+<h2> User interface: </h2>
+<p>
+Since this uses hough transform, users enter these parameters into the command line,
+<p>
+./ sigma lo hi nBlur mincnt avgthresh in.png out.png
+<p>
+avgthresh is specific to our program, and determines the average darkness of the scan window at which we will consider something a note.
+
+
+
+
+
+
+<p>
+<img src="cs453testimg.png"
+style="width:600px;height:400px;">
+
+<p>
+<img src="testout.png"
+style="width:600px;height:400px;">
+<p>
+
+<p>
+length startx starty endx endy slope staff# staffline
+<p>
+<img src="table.png"
+style="width:350px;height:500px;">
+
+<img src="cs453testimg.png"
+style="width:600px;height:400px;">
+<p>
+
+References:
+Professor Scharstein and "Computer Vision" by Shapiro and Stockman
